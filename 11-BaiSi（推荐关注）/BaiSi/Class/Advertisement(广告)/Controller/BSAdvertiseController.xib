@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BSAdvertiseController">
+            <connections>
+                <outlet property="bgImageVeiw" destination="Dib-pP-fPa" id="WW0-Hg-4Of"/>
+                <outlet property="skipButton" destination="PvY-Ke-Ipn" id="Lsz-x7-CvZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage-800-667h.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dib-pP-fPa" userLabel="BGImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvY-Ke-Ipn">
+                    <rect key="frame" x="450" y="30" width="120" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="343-ff-eEr"/>
+                        <constraint firstAttribute="height" constant="40" id="GZ0-KY-cqQ"/>
+                    </constraints>
+                    <state key="normal" title="跳过广告（3）">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="skipButtonClick" destination="-1" eventType="touchUpInside" id="YMB-6V-0SE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Dib-pP-fPa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2vq-5t-2NY"/>
+                <constraint firstItem="PvY-Ke-Ipn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="453-c9-3os"/>
+                <constraint firstAttribute="trailing" secondItem="Dib-pP-fPa" secondAttribute="trailing" id="Njg-FS-yYj"/>
+                <constraint firstAttribute="bottom" secondItem="Dib-pP-fPa" secondAttribute="bottom" id="iK3-Ph-6SG"/>
+                <constraint firstItem="Dib-pP-fPa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uhw-BZ-S8O"/>
+                <constraint firstAttribute="trailing" secondItem="PvY-Ke-Ipn" secondAttribute="trailing" constant="30" id="x3t-1h-TlG"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="LaunchImage-800-667h.png" width="375" height="667"/>
+    </resources>
+</document>

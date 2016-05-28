@@ -1,0 +1,67 @@
+//
+//  BaiSi.pch
+//  02-BaiSi
+//
+//  Created by ming on 13/12/18.
+//  Copyright © 2015年 ming. All rights reserved.
+//
+
+#ifndef BaiSi_pch
+#define BaiSi_pch
+
+#ifdef __OBJC__
+
+/* 分类 */
+#import "UIView+LYMExtension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "BSGlobalConstant.h"
+#import "NSObject+FileManager.h"
+#import "UITextField+LYMPlaceholderColor.h"
+#import "NSDate+MGExtension.h"
+#import "UIImage+MGImage.h"
+#import "UIImageView+MGHeader.h"
+#import "LYMTimeTool.h"
+#import "SVProgressHUD.h"
+
+/* 屏幕有关 */
+#define iPone6   ([UIScreen mainScreen].bounds.size.height == 667)
+#define iPone6P   ([UIScreen mainScreen].bounds.size.height == 736)
+#define iPone5   ([UIScreen mainScreen].bounds.size.height == 568)
+#define iPone4  ([UIScreen mainScreen].bounds.size.height == 480)
+
+#define BSScreenW [UIScreen mainScreen].bounds.size.width
+#define BSScreenH [UIScreen mainScreen].bounds.size.height
+
+//主窗口
+#define BSKeyWindow [UIApplication sharedApplication].keyWindow
+
+// 请求路径
+#define BSUrl @"http://api.budejie.com/api/api_open.php"
+
+/*  颜色有关 */
+#define BSColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define BSRandomColor BSColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
+#define BSGlobalBgColor BSColor(206,206,206)
+
+/*** 评论-头部控件-字体 ***/
+#define BSCommentSectionHeaderFont [UIFont systemFontOfSize:15]
+
+// 弱引用
+#define LYMWeakSelf __weak typeof(self) weakSelf = self;
+
+
+/* 日志打印输出  */
+#ifdef DEBUG  // 调试阶段
+#define BSLog(...) NSLog(__VA_ARGS__)
+#else   // 发布阶段
+#define BSLog(...)
+
+#endif
+
+#define BSLogFunc BSLog(@"%s",__func__);
+
+#endif
+
+
+
+#endif /* BaiSi_pch */

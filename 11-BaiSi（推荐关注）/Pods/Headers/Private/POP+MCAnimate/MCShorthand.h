@@ -1,0 +1,1 @@
+../../../POP+MCAnimate/POP+MCAnimate/Shorthand/MCShorthand.h

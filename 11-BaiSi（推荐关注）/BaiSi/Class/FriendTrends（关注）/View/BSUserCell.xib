@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="KGk-i7-Jjw" customClass="BSUserCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H1g-Wv-RCd">
+                        <rect key="frame" x="13" y="13" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="YLN-r9-i0J"/>
+                            <constraint firstAttribute="height" constant="45" id="cTN-Zp-R3I"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XB-Zw-4cg">
+                        <rect key="frame" x="74" y="13" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cb-Sj-u29">
+                        <rect key="frame" x="74" y="41" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeU-hf-nK3">
+                        <rect key="frame" x="256" y="21" width="54" height="30"/>
+                        <state key="normal" title=" ➕关注">
+                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XeU-hf-nK3" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="32G-av-08T"/>
+                    <constraint firstItem="XeU-hf-nK3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7rA-U7-TQN"/>
+                    <constraint firstItem="0XB-Zw-4cg" firstAttribute="top" secondItem="H1g-Wv-RCd" secondAttribute="top" id="TU4-0l-aD0"/>
+                    <constraint firstItem="9cb-Sj-u29" firstAttribute="bottom" secondItem="H1g-Wv-RCd" secondAttribute="bottom" id="fIo-db-8hf"/>
+                    <constraint firstItem="0XB-Zw-4cg" firstAttribute="leading" secondItem="H1g-Wv-RCd" secondAttribute="trailing" constant="16" id="kL7-NB-Wfa"/>
+                    <constraint firstItem="XeU-hf-nK3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="nHk-77-bdy"/>
+                    <constraint firstItem="9cb-Sj-u29" firstAttribute="leading" secondItem="0XB-Zw-4cg" secondAttribute="leading" id="skD-Bp-oxT"/>
+                    <constraint firstItem="H1g-Wv-RCd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="xGc-tb-qHA"/>
+                    <constraint firstItem="H1g-Wv-RCd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="xka-FG-A80"/>
+                    <constraint firstAttribute="trailing" secondItem="XeU-hf-nK3" secondAttribute="trailing" constant="10" id="zUS-Ek-97D"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="32G-av-08T"/>
+                        <exclude reference="nHk-77-bdy"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fansCountLabel" destination="9cb-Sj-u29" id="CWe-4C-ohD"/>
+                <outlet property="headerView" destination="H1g-Wv-RCd" id="sb9-Ep-slL"/>
+                <outlet property="screenNameLabel" destination="0XB-Zw-4cg" id="5E1-I7-4RG"/>
+            </connections>
+            <point key="canvasLocation" x="288" y="338"/>
+        </tableViewCell>
+    </objects>
+</document>
